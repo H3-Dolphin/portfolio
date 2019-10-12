@@ -1,0 +1,248 @@
+@charset "UTF-8";
+body{
+    font-family: sans-serif;
+    background-size: cover;
+    color: #333;
+    /*text-align: center;*/
+    font-size: 1.4rem;
+}
+
+.el-menu{
+    /*background-color: #CCFFFF;*/
+    background: url('../images/bg-slash.gif');
+    /*width: 50px;   バーの位置変わる*/
+}
+
+.el-aside{
+    /*background-color: #CCFFFF;*/
+    background: url('../images/bg-slash.gif');
+}
+
+.el-header{
+    padding: 70px 0 100px 0;
+    background-image: url(https://i.ytimg.com/vi/7qa_Nw9AuFs/maxresdefault.jpg);
+    background-size: cover;
+    color: black;
+    text-align: center;
+    line-height: 65px;
+}
+
+.el-header a{
+    text-decoration: none;
+    color: black;
+}
+
+.el-header h1 {
+    font-size: 55px;
+    letter-spacing: 5px;
+}
+.el-header p {
+    font-size: 14px;
+    /*margin-bottom: 35px;*/
+}
+
+.el-container{
+    line-height: 35px;
+}
+
+.el-row {
+    margin-bottom: 10px;
+&:last-child {
+     margin-bottom: 0;
+ }
+}
+.el-col {
+    border-radius: 4px;
+}
+
+.bg-purple {
+    background: #CCFFFF;
+}
+
+.grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+}
+.row-bg {
+    padding: 10px 0;
+    /*background-color: #999;*/
+}
+
+ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+ul h2{
+    text-align: center;
+}
+
+.el-footer{
+    width: 100%;
+    padding: 20px 0 30px;
+    background: #2d3d54 url('../images/bg-footer.gif');
+    color: #fff;
+}
+
+.about{
+    padding: 30px 30px;
+    background-color: #333;
+    color: #fff;
+ }
+ .heading{
+     text-align: center;
+     position: relative;
+     /*display: inline-block;*/
+     margin: 30px 0 15px;
+     padding-bottom: 15px;
+     letter-spacing: 2px;
+     font-size: 4rem;
+ }
+
+ .heading::before,
+ .heading::after{
+     content: '';
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     border-bottom: 1px solid #999;
+ }
+ .heading::before{
+     bottom: 5px;
+ }
+ .about-text{
+     text-align: center;
+     margin:30px 0;
+     line-height: 2.5;
+ }
+.row-bg {
+    padding: 10px 0;
+}
+
+
+.horizontal-list{
+    width: 1250px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 0;
+}
+.horizontal-list .horizontal-item{
+    display: inline-block;
+    padding: 0 15px;
+    letter-spacing: 1px;
+}
+.horizontal-list .horizontal-item + .horizontal-item{
+    border-left: 1px solid #bbb;
+}
+.horizontal-list .horizontal-item a{
+    border-bottom: 1px dashed #777;
+    color: #bbb;
+    font-size: 1.1rem;
+    transition: color 0.15s;
+    text-decoration: none;
+}
+.horizontal-list .horizontal-item a:hover{
+    color: #ddd;
+}
+
+.el-main{
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 768px) {
+    /* ヘッダーのレスポンシブ*/
+    .el-header{
+        padding: 50px 0 100px 0;
+        background-image: url(https://i.ytimg.com/vi/7qa_Nw9AuFs/maxresdefault.jpg);
+        background-size: cover;
+        color: black;
+        text-align: center;
+        line-height: 45px;
+    }
+
+    .el-header a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .el-header h1 {
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+    .el-header p {
+        font-size: 14px;
+        /*margin-bottom: 35px;*/
+    }
+    /* ヘッダーのレスポンシブ*/
+
+    /* aboutセクションのレスポンシブ*/
+    .about{
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+    }
+    .heading{
+        text-align: center;
+        position: relative;
+        /*display: inline-block;*/
+        margin: 30px 0 15px;
+        padding-bottom: 5px;
+        letter-spacing: 2px;
+        font-size: 2rem;
+    }
+
+    .heading::before,
+    .heading::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid #999;
+    }
+    .heading::before{
+        bottom: 5px;
+    }
+    .about-text{
+        text-align: center;
+        margin:30px 0;
+        line-height: 2.5;
+    }
+    /* aboutセクションのレスポンシブ*/
+
+    /*メイン要素*/
+    .el-col {
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    /*メイン要素*/
+
+    /*フッター*/
+    .horizontal-list{
+        width: 340px;
+        margin: 0 auto;
+        text-align: right;
+        font-size: 0;
+    }
+    .horizontal-list .horizontal-item{
+        display: inline-block;
+        padding: 0 15px;
+        letter-spacing: 1px;
+    }
+    .horizontal-list .horizontal-item + .horizontal-item{
+        border-left: 1px solid #bbb;
+    }
+    .horizontal-list .horizontal-item a{
+        border-bottom: 1px dashed #777;
+        color: #bbb;
+        font-size: 1.1rem;
+        transition: color 0.15s;
+        text-decoration: none;
+    }
+    .horizontal-list .horizontal-item a:hover{
+        color: #ddd;
+    }
+    /*フッター*/
+}

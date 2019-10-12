@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- viewportの設定 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>理科大生のポートフォリオサイト</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.4.1/locale/en.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+ <!-- <link rel="stylesheet" href="css/stylesheet_small.css" media="screen and (max-width:480px)">  　画面サイズ480px未満 -->
+  <!--<link rel="stylesheet" href="css/stylesheet_mid.css" media="screen and (min-width:480px) and (max-width:1024px)">  <! 画面サイズ480pxから1024px -->
+  <link rel="stylesheet" href="css/stylesheet_big.css"> <!-- 画面サイズ1024px以上 -->
+</head>
+
+<body>
+<div id="app">
+  <el-container>   <!-- ラッパーコンテナ -->
+    <el-header height="350px" align="center">  <!--ヘッダーがとるスペース-->
+      <a href="#"><h1>Programming Outputs<br>and<br>Electrical Works</h1></a>
+      <p>このサイトは理科大生の自己紹介サイトです。</p>
+    </el-header>
+
+      <el-main>
+        <section class="about" id="about">
+          <h3 class="heading">ABOUT ME</h3>
+          <p class="about-text">
+            私は東京理科大学の学生です。<br>
+            学校や趣味でプログラミングや電子工作について学んでおり、新しい技術全般に興味があります。<br>
+          </p>
+          <p class="about-text">
+            フロントエンドのフレームワークとして興味を持ったVue.jsを用いて、<br>ポートフォリオサイトとしてこのサイトを作りました。
+          </p>
+        </section>
+
+        <el-container>
+          <el-aside width="150px">  <!--サイドバーの位置変わる-->
+            <el-col :span="24">  <!-- 列の幅 -->
+              <el-menu default-active="1" class="el-menu-vertical-demo">  <!-- 左の要素の数だけ指定してる？ -->
+                <el-menu-item index="1">
+                  <i class="el-icon-s-home"></i>
+                  <router-link to="/top">top</router-link>
+                </el-menu-item>
+                <el-menu-item index="2">
+                  <i class="el-icon-user-solid"></i>
+                  <router-link to="/profile"><span>profile</span></router-link>
+                </el-menu-item>
+                <el-menu-item index="3">
+                  <i class="el-icon-edit"></i>
+                  <router-link to="/skills"><span>skills</span></router-link>
+                </el-menu-item>
+                <el-menu-item index="4">
+                  <i class="el-icon-monitor"></i>
+                  <router-link to="/outputs"><span>outputs</span></router-link>
+                </el-menu-item>
+              </el-menu>
+            </el-col>
+          </el-aside>
+          <section class="henka">
+            <!-- ここにでる -->
+            <transition name="el-fade-in-linear" mode="out-in">
+              <router-view></router-view>
+            </transition>
+          </section>
+        </el-container>
+      </el-main>
+    </el-container>
+    <el-footer>
+        <ul class="horizontal-list">
+            <li class="horizontal-item"><a href="#">top</a></li>
+            <li class="horizontal-item"><a href="#">profile</a></li>
+            <li class="horizontal-item"><a href="#">skills</a></li>
+            <li class="horizontal-item"><a href="#">outputs</a></li>
+        </ul>
+    </el-footer>
+  </div>
+</body>
+
+<script>
+
+  // ルータコンポーネント
+  const Top = { template: `<top-comp></top-comp>`}
+  const Profile = { template: '<pro-comp></pro-comp>'}
+  const Skills = { template: '<skills-comp></skills-comp>'}
+  const Outputs = { template: '<temp-comp></temp-comp>'}
+
+  // ルート定義
+  const routes = [
+    { path: '/top', component: Top },
+    { path: '/profile', component: Profile },
+    { path: '/skills', component: Skills },
+    { path: '/outputs', component: Outputs }
+  ]
+
+  // ルータインスタンス
+  const router = new VueRouter({
+    routes // short for `routes: routes`
+  })
+
+  // gutterは列の間隔 spanは列の幅
+  Vue.component('top-comp', {
+    template: `
+          <el-row :gutter="20" class="row-bg">
+            <el-col :xs="24" :sm="24" :md="24"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>このサイトについて</h2>
+                    <p>このサイトはプログラミングを学ぶ東京理科大学の学生が作った自己紹介サイトです。</p>
+                    <p>profileは主に学校について、skillsはプログラミングの使用言語や用途について、outputsは成果物について記載しています。</p>
+                </ul>
+                </div></el-col>
+          </el-row>
+  `,
+  })
+
+  Vue.component('pro-comp', {
+    template: `
+          <el-row :gutter="20" class="row-bg">
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>学校</h2>
+                    <p>私は東京理科大学工学部電気工学科の3年生です。電気工学科というものの、電気電子・情報・通信について幅広い分野をカバーする学科であり、プログラミングについても広く学んでいます。</p>
+                 </ul></div></el-col>
+           　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>興味</h2>
+                    <p>興味のある分野は電子回路などの組み込み系や、レイヤーを問わないプログラミングなど多岐にわたります。また、TOEIC L&R のスコアは750点(2019年3月)で、それなりに英語が話せます。</p>
+                 </ul></div></el-col>
+           　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>スタンガン</h2>
+                    <p>プログラミングと電子工作を扱うサークルに所属しており、学校で習った回路の知識などを生かして電子工作をすることがあります。趣味で作ったスタンガンの製作ページは<a href="https://h3-dolphin.github.io/stun/">こちら</a></p>
+                 </ul></div></el-col>
+          </el-row>
+  `
+  })
+
+  Vue.component('skills-comp', {
+    template: `
+          <el-row :gutter="20" class="row-bg">
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>競プロ</h2>
+                    <p><a href="https://atcoder.jp/users/cinnamon">AtCoder</a>という競技プログラミングの会社が開くコンテストにC++で参加しており、レートは最高774で、学生として十分な実装力があるとされる段階にあります。</p>
+                 </ul></div></el-col>
+           　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>開発言語</h2>
+                    <p>HTML/CSSに加え、JavaScriptはVue.jsをサイト製作に使用するほか、Node.jsを用いたSlackのbot作りなどサーバーサイドのプログラミングにも使用しています。</p>
+                 </ul></div></el-col>
+           　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>その他言語</h2>
+                    <p>MATLABを回路の解析などに使用することや、Pythonを実験データの整理などに使用することがあります。Javaは学校の授業で扱った程度です。</p>
+                 </ul></div></el-col>
+          </el-row>
+  `
+  })
+
+  Vue.component('temp-comp', {
+    template: `
+          <el-row :gutter="20" class="row-bg">
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>GitHub</h2>
+                    <p>GitHubはこちら<a href="https://github.com/H3-Dolphin">https://github.com/H3-Dolphin</a></p>
+                 </ul></div></el-col>
+           　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>Slackのbot</h2>
+                    <p>Node.jsで<a href="https://github.com/H3-Dolphin/emo">Slackのbot</a>を作成してGit/GitHubで管理し、Herokuでデプロイしています。</p>
+                 </ul></div></el-col>
+           　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>このページ</h2>
+                    <p>Vue.jsを使ってポートフォリオサイトとして作成しました。GitHub Pagesでデプロイしています。</p>
+                 </ul></div></el-col>
+          </el-row>
+  `
+  })
+
+  ELEMENT.locale(ELEMENT.lang.en)
+  var vm = new Vue({
+    // Vueインスタンスに作ったルータ渡してる
+    router,
+    el: '#app'
+  })
+</script>
+</html>
