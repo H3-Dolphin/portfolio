@@ -20,7 +20,7 @@ body{
 
 .el-header{
     padding: 70px 0 100px 0;
-    background-image: url(https://i.ytimg.com/vi/7qa_Nw9AuFs/maxresdefault.jpg);
+    background-image: url('../images/portfolio_header.jpg');
     background-size: cover;
     color: black;
     text-align: center;
