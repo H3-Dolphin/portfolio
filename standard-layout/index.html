@@ -23,59 +23,59 @@
       <p>このサイトは理科大生の自己紹介サイトです。</p>
     </el-header>
 
-      <el-main>
-        <section class="about" id="about">
-          <h3 class="heading">ABOUT ME</h3>
-          <p class="about-text">
-            私は東京理科大学の学生です。<br>
-            学校や趣味でプログラミングや電子工作について学んでおり、新しい技術全般に興味があります。<br>
-          </p>
-          <p class="about-text">
-            フロントエンドのフレームワークとして興味を持ったVue.jsを用いて、<br>ポートフォリオサイトとしてこのサイトを作りました。
-          </p>
-        </section>
+    <el-main>
+      <section class="about" id="about">
+        <h3 class="heading">ABOUT ME</h3>
+        <p class="about-text">
+          私は東京理科大学の学生です。<br>
+          学校や趣味でプログラミングや電子工作について学んでおり、新しい技術全般に興味があります。<br>
+        </p>
+        <p class="about-text">
+          フロントエンドのフレームワークとして興味を持ったVue.jsを用いて、<br>ポートフォリオサイトとしてこのサイトを作りました。
+        </p>
+      </section>
 
-        <el-container>
-          <el-aside width="150px">  <!--サイドバーの位置変わる-->
-            <el-col :span="24">  <!-- 列の幅 -->
-              <el-menu default-active="1" class="el-menu-vertical-demo">  <!-- 左の要素の数だけ指定してる？ -->
-                <el-menu-item index="1">
-                  <i class="el-icon-s-home"></i>
-                  <router-link to="/top">top</router-link>
-                </el-menu-item>
-                <el-menu-item index="2">
-                  <i class="el-icon-user-solid"></i>
-                  <router-link to="/profile"><span>profile</span></router-link>
-                </el-menu-item>
-                <el-menu-item index="3">
-                  <i class="el-icon-edit"></i>
-                  <router-link to="/skills"><span>skills</span></router-link>
-                </el-menu-item>
-                <el-menu-item index="4">
-                  <i class="el-icon-monitor"></i>
-                  <router-link to="/outputs"><span>outputs</span></router-link>
-                </el-menu-item>
-              </el-menu>
-            </el-col>
-          </el-aside>
-          <section class="henka">
-            <!-- ここにでる -->
-            <transition name="el-fade-in-linear" mode="out-in">
-              <router-view></router-view>
-            </transition>
-          </section>
-        </el-container>
-      </el-main>
-    </el-container>
-    <el-footer>
-        <ul class="horizontal-list">
-          <li class="horizontal-item"><router-link to="/top"><span>top</span></router-link></li>
-          <li class="horizontal-item"><router-link to="/profile"><span>profile</span></router-link></li>
-          <li class="horizontal-item"><router-link to="/skills"><span>skills</span></router-link></li>
-          <li class="horizontal-item"><router-link to="/outputs"><span>outputs</span></router-link></li>
-        </ul>
-    </el-footer>
-  </div>
+      <el-container>
+        <el-aside width="150px">  <!--サイドバーの位置変わる-->
+          <el-col :span="24">  <!-- 列の幅 -->
+            <el-menu default-active="1" class="el-menu-vertical-demo">  <!-- 左の要素の数だけ指定してる？ -->
+              <el-menu-item index="1">
+                <i class="el-icon-s-home"></i>
+                <router-link to="/top">top</router-link>
+              </el-menu-item>
+              <el-menu-item index="2">
+                <i class="el-icon-user-solid"></i>
+                <router-link to="/profile"><span>profile</span></router-link>
+              </el-menu-item>
+              <el-menu-item index="3">
+                <i class="el-icon-edit"></i>
+                <router-link to="/skills"><span>skills</span></router-link>
+              </el-menu-item>
+              <el-menu-item index="4">
+                <i class="el-icon-monitor"></i>
+                <router-link to="/outputs"><span>outputs</span></router-link>
+              </el-menu-item>
+            </el-menu>
+          </el-col>
+        </el-aside>
+        <section class="henka">
+          <!-- ここにでる -->
+          <transition name="el-fade-in-linear" mode="out-in">
+            <router-view></router-view>
+          </transition>
+        </section>
+      </el-container>
+    </el-main>
+  </el-container>
+  <el-footer>
+    <ul class="horizontal-list">
+      <li class="horizontal-item"><router-link to="/top"><span>top</span></router-link></li>
+      <li class="horizontal-item"><router-link to="/profile"><span>profile</span></router-link></li>
+      <li class="horizontal-item"><router-link to="/skills"><span>skills</span></router-link></li>
+      <li class="horizontal-item"><router-link to="/outputs"><span>outputs</span></router-link></li>
+    </ul>
+  </el-footer>
+</div>
 </body>
 
 <script>
@@ -130,7 +130,12 @@
            　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
                     <h2>スタンガン</h2>
-                    <p>プログラミングと電子工作を扱うサークルに所属しており、学校で習った回路の知識などを生かして電子工作をすることがあります。趣味で作ったスタンガンの製作ページは<a href="https://h3-dolphin.github.io/stun/">こちら</a></p>
+                    <p>プログラミングと電子工作を扱うサークルに所属しており、学校で習った回路の知識などを生かして電子工作をすることがあります。秋月電子やaitendoで部品を買うことが多いです。</p>
+                 </ul></div></el-col>
+             <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>インターン</h2>
+                    <p>大規模統合認証基盤を提供する<a href="https://kfep.jp/">会社</a>のインフラチームで長期インターンをしており、情報セキュリティやネットワークの実務経験を積んでいます。(2020年2月~)</p>
                  </ul></div></el-col>
           </el-row>
   `
@@ -139,15 +144,25 @@
   Vue.component('skills-comp', {
     template: `
           <el-row :gutter="20" class="row-bg">
-            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
-                <ul>
-                    <h2>競プロ</h2>
-                    <p><a href="https://atcoder.jp/users/cinnamon">AtCoder</a>という競技プログラミングの会社が開くコンテストにC++で参加しており、レートは最高774で、学生として十分な実装力があるとされる段階にあります。</p>
-                 </ul></div></el-col>
            　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
-                    <h2>開発言語</h2>
-                    <p>HTML/CSSに加え、JavaScriptはVue.jsをサイト製作に使用するほか、Node.jsを用いたSlackのbot作りなどサーバーサイドのプログラミングにも使用しています。</p>
+                    <h2>HTML/CSS</h2>
+                    <p>このサイトのようなWebサイト製作に使用。エディタはCLionを使用しています。</p>
+                 </ul></div></el-col>
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>JavaScript</h2>
+                    <p>Vue.jsをWebサイト製作に使用するほか、Node.jsを用いたGCP上のアプリ作りなど。</p>
+                 </ul></div></el-col>
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>R</h2>
+                    <p>主に教師なし学習を用いてレコメンドシステムの実装に使用し、データマイニングの授業で最高評価を得ました。</p>
+                 </ul></div></el-col>
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>C++</h2>
+                    <p><a href="https://atcoder.jp/users/cinnamon">AtCoder</a>という競技プログラミングの会社が開くコンテストにC++で参加しており、レートは最高774で、学生として十分な実装力があるとされる段階にあります。</p>
                  </ul></div></el-col>
            　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
@@ -163,8 +178,8 @@
           <el-row :gutter="20" class="row-bg">
             <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
-                    <h2>GitHub</h2>
-                    <p>GitHubはこちら<a href="https://github.com/H3-Dolphin">https://github.com/H3-Dolphin</a></p>
+                    <h2>Nodeのサンプルアプリ</h2>
+                    <p>GCPのGAEでデプロイしているNode.jsの<a href="https://books-269010.appspot.com/books/add">サンプルアプリ</a>です。フレームワークはExpressです。</p>
                  </ul></div></el-col>
            　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
@@ -174,7 +189,12 @@
            　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
                     <h2>このページ</h2>
-                    <p>Vue.jsを使ってポートフォリオサイトとして作成しました。GitHub Pagesでデプロイしています。</p>
+                    <p>Vue.jsを使ってポートフォリオサイトとして作成しました。GitHub Pagesにホスティングしています。</p>
+                 </ul></div></el-col>
+            <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
+                <ul>
+                    <h2>GitHub</h2>
+                    <p>GitHubはこちら<a href="https://github.com/H3-Dolphin">https://github.com/H3-Dolphin</a></p>
                  </ul></div></el-col>
           </el-row>
   `
