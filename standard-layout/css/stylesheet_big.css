@@ -9,13 +9,13 @@ body{
 
 .el-menu{
     /*background-color: #CCFFFF;*/
-    background: url('../images/bg-slash.gif');
+    /*background: url('../images/bg-slash.gif');*/
     /*width: 50px;   バーの位置変わる*/
 }
 
 .el-aside{
     /*background-color: #CCFFFF;*/
-    background: url('../images/bg-slash.gif');
+    /*background: url('../images/bg-slash.gif');*/
 }
 
 .el-header{
@@ -47,9 +47,9 @@ body{
 
 .el-row {
     margin-bottom: 10px;
-&:last-child {
+    &:last-child {
      margin-bottom: 0;
- }
+    }
 }
 .el-col {
     border-radius: 4px;
@@ -60,8 +60,9 @@ body{
 }
 
 .grid-content {
-    border-radius: 4px;
+    border-radius: 28px;
     min-height: 36px;
+    margin: 5px;
 }
 .row-bg {
     padding: 10px 0;
@@ -88,34 +89,34 @@ ul h2{
     padding: 30px 30px;
     background-color: #333;
     color: #fff;
- }
- .heading{
-     text-align: center;
-     position: relative;
-     /*display: inline-block;*/
-     margin: 30px 0 15px;
-     padding-bottom: 15px;
-     letter-spacing: 2px;
-     font-size: 4rem;
- }
+}
+.heading{
+    text-align: center;
+    position: relative;
+    /*display: inline-block;*/
+    margin: 30px 0 15px;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 4rem;
+}
 
- .heading::before,
- .heading::after{
-     content: '';
-     position: absolute;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     border-bottom: 1px solid #999;
- }
- .heading::before{
-     bottom: 5px;
- }
- .about-text{
-     text-align: center;
-     margin:30px 0;
-     line-height: 2.5;
- }
+.heading::before,
+.heading::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #999;
+}
+.heading::before{
+    bottom: 5px;
+}
+.about-text{
+    text-align: center;
+    margin:30px 0;
+    line-height: 2.5;
+}
 .row-bg {
     padding: 10px 0;
 }
