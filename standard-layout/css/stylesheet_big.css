@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body{
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
+    font-family: 'Noto Sans JP', sans-serif;
     background-size: cover;
     color: #333;
     /*text-align: center;*/
