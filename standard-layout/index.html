@@ -12,6 +12,8 @@
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.4.1/locale/en.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/stylesheet_big.css">
 </head>
@@ -19,7 +21,7 @@
 <body>
 <div id="app">
   <el-container>   <!-- ラッパーコンテナ -->
-    <el-header height="350px" align="center">  <!--ヘッダーがとるスペース-->
+    <el-header height="350px" align="center" data-parallax="scroll" data-image-src="./images/portfolio_header.jpg">  <!--ヘッダーがとるスペース、パララックス化-->
       <a href="#"><h1>Programming Outputs<br>and<br>Electrical Works</h1></a>
       <p>このサイトは理科大生の自己紹介サイトです。</p>
     </el-header>
@@ -153,7 +155,7 @@
            　<el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
                     <h2>HTML/CSS</h2>
-                    <p>このサイトのようなWebサイト製作に使用。エディタはCLionをなどを使用しています。</p>
+                    <p>このサイトのようなWebサイト製作に使用。エディタはCLionなどを使用しています。</p>
                  </ul></div></el-col>
             <el-col :xs="24" :sm="12" :md="8"><div class="grid-content bg-purple">
                 <ul>
