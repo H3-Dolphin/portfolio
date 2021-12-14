@@ -21,7 +21,7 @@ body{
 
 .el-header{
     padding: 70px 0 100px 0;
-    background-image: url('../images/portfolio_header.jpg');
+    /*background-image: url('../images/portfolio_header.jpg');*/
     background-size: cover;
     color: black;
     text-align: center;
@@ -61,6 +61,7 @@ body{
 }
 
 .grid-content {
+    border: solid black;
     border-radius: 20px;
     min-height: 36px;
     margin: 5px;
